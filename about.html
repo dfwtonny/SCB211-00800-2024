@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Tony</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>About Tony</h1>
+        <hr>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu1.html">Menu 1</a>
+            <a href="menu2.html">Menu 2</a>
+        </nav>
+        <hr>
+    </header>
+    <section>
+        <h2>Iam Tony Abuya!</h2>
+        <img src="images/profpic1.jpg" alt="Tony's Profile" style="width:250px;height: 400px;">
+        <h3>Background:</h3>
+            <p>Tony abuya is a first-year Bachelor of Science in Biotechnology student at the Jomo Kenyatta University of Agriculture and Technology. With a strong interest in science and technology, Tony brings hands-on experience from freelancing as a phone repair technician and working as a cleaner, showcasing his resilience and dedication.</p>
+        <br>
+        <h3>Skills:</h3>
+        <ul>
+            <li>Proficient in Microsoft Office Suite (Word, Excel, PowerPoint).</li>
+
+            <li>Coding skills in HTML, CSS and JavaScript</li>
+
+            <li>Basic programming skills in Python and Java.</li>
+
+            <li>Experienced in phone repair, network troubleshooting, and computer hardware.</li>
+
+            <li>Strong communication, teamwork, and problem-solving abilities.</li>
+        </ul>
+        <br>
+        <h3>Hobbies:</h3>
+        <p>Tony enjoys practical and creative pursuits, such as:</p>
+        <ul>
+
+            <li>Cooking and exploring new recipes.</li>
+
+            <li>Diving into topics like microbiology, animal physiology, and plant diversity.</li>
+
+            <li>Developing a personal portfolio website to showcase his skills.</li>
+        </ul>
+        <br>
+        <h3>Goals:</h3>
+        <p>In the short term, Tony aims to secure a job while honing his web development skills.</p>
+        <p>In the long-term, he seeks financial independence and plans to make meaningful contributions to biotechnology, particularly in areas like genetic engineering and bioprocess technology.
+        </p>
+        <br>
+        <h3>Cool point</h3>
+        <div class="container">
+        <img src="images/meme1.jpeg" class="images">
+        <img src="images/meme2.jpeg" class="images">
+        <img src="images/meme3.jpeg" class="images">
+        <img src="images/motives.jpg" class="images">
+        </div>
+    </section>
+    <div class="j1">
+    <h3>Fun Facts</h3>
+     <button onclick="showJoke()" id="but">Show Joke</button>
+     <button onclick="showAnswer()" id="but">Show Answer</button>
+     <div class="output" id="output"></div>
+
+    <script>
+        const jokes = [
+            { 
+                joke: "Why don’t programmers like nature?", 
+                answer: "It has too many bugs."
+            },
+            { 
+                joke: "Why did the HTML go to therapy?", 
+                answer: "It had too many unresolved issues."
+            },
+            { 
+                joke: "Why don’t websites get lost?", 
+                answer: "Because they have great navigation!"
+            },
+            { 
+                joke: "Why was the website feeling shy?", 
+                answer: "It didn’t get enough traffic."
+            }
+        ];
+
+        let currentJoke = null;
+
+        function showJoke() {
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            currentJoke = jokes[randomIndex]; // Save the current joke
+            document.getElementById("output").innerText = currentJoke.joke;
+        }
+
+        function showAnswer() {
+            if (currentJoke) {
+                document.getElementById("output").innerText = currentJoke.answer;
+            } else {
+                document.getElementById("output").innerText = "Click 'Show Joke' first!";
+            }
+        }
+    </script>
+    </div>
+    <footer>
+        <p>© 2025 Tony Abuya,All Right Reserved</p>
+    </footer>
+</body>
+</html>
